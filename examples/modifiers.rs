@@ -10,10 +10,10 @@ impl View for ModifiersView {
 
     fn body(&self) -> Self::Body {
         VStack::from((
-            Text::new("New Modifiers Demo").font(Font::TITLE),
+            Text::new("New Modifiers Demo").font(Font::TITLE).padding(20.0),
             
             // Visual Effects
-            Text::new("Visual Effects").font(Font::TITLE2),
+            Text::new("Visual Effects").font(Font::TITLE2).padding(10.0),
             HStack::from((
                 VStack::from((
                     Text::new("Border"),
@@ -49,7 +49,7 @@ impl View for ModifiersView {
             )),
             
             // Color Adjustments
-            Text::new("Color Adjustments").font(Font::TITLE2),
+            Text::new("Color Adjustments").font(Font::TITLE2).padding(10.0),
             HStack::from((
                 VStack::from((
                     Text::new("Grayscale"),
@@ -85,14 +85,16 @@ impl View for ModifiersView {
             )),
             
             // State modifiers
-            Text::new("State & Layout").font(Font::TITLE2),
+            Text::new("State & Layout").font(Font::TITLE2).padding(10.0),
             HStack::from((
                 VStack::from((
                     Text::new("Disabled"),
                     HStack::from((
                         Text::new("Normal")
+                            .padding(10.0)
                             .background(Style::color(Color::BLUE)),
                         Text::new("Disabled")
+                            .padding(10.0)
                             .background(Style::color(Color::BLUE))
                             .disabled(true),
                     )),
@@ -127,6 +129,7 @@ impl View for ModifiersView {
                 )),
             )),
         ))
+        .padding(20.0)
     }
 }
 
